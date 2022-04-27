@@ -1,19 +1,20 @@
 #include<stdio.h>
 int main()
 {
-    int n,arr[100][100],i,j;
+    int n,i,j,k,m;
     scanf("%d",&n);
-    for(i=0;i<n;i++)
+    for(i=1;i<=n;i++)
     {
-        for(j=0;j<n;j++)
+        for(j=1;j<n-1;j++)
         {
-            if(i==j)
+            printf("%d",j);
+            if(j==n-2)
             {
-                printf("0");
-            }
-            else
-            {
-                printf("x");
+                m=j;
+                for(k=1;k<m;k++)
+                {
+                    printf("%d",k);
+                }
             }
         }
         printf("
