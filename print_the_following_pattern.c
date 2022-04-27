@@ -10,8 +10,8 @@ int main()
             printf("%d",j);
             if(j==n-2)
             {
-                m=j;
-                for(k=1;k<m;k++)
+                m=j-1;
+                for(k=m;k>=1;k--)
                 {
                     printf("%d",k);
                 }
