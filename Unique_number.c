@@ -2,7 +2,7 @@
 int main()
 {
     int n,i,digit;
-    static int arr[100];
+    static int arr[10];
     scanf("%d",&n);
     while(n>0)
     {
