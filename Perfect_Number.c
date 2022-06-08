@@ -1,22 +1,22 @@
 #include<stdio.h>
-int factors(int n)
+int perfect_num(int n)
 {
-    int i,fc=0;
+    int sum=0,i;
     for(i=1;i<n;i++)
     {
         if(n%i==0)
         {
-            fc=fc+i;
+            sum=sum+i;
         }
     }
-    return fc;
+    return sum;
 }
 int main()
 {
-    int n,fc;
+    int n,k;
     scanf("%d",&n);
-    fc=factors(n);
-    if(fc==n)
+    k=perfect_num(n);
+    if(k==n)
     {
         printf("True");
     }
