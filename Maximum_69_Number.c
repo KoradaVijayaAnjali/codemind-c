@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<math.h>
-int main(){
+int main()
+{
     int n,d,r,k=0;
     scanf("%d",&n);
     d=(int)log10(n);
@@ -19,5 +20,4 @@ int main(){
         n=n%(int)ceil(pow(10,d));
         d--;
     }
-    return 0;
 }
