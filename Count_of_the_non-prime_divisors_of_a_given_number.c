@@ -1,7 +1,7 @@
 #include<stdio.h>
-void non_prime(int *arr,int p)
+int non_prime(int *arr,int p)
 {
-    int i,c=0,j,k=0;
+    int i,c=0,j,k=0,h;
     for(i=0;i<p;i++)
     {
         for(j=1;j<=arr[i];j++)
@@ -17,11 +17,12 @@ void non_prime(int *arr,int p)
         }
         c=0;
     }
-    printf("%d",p-k);
+    h=p-k;
+    return h;
 }
 int main()
 {
-    int n,i,k,arr[100],p=0;
+    int n,i,arr[100],p=0,h,k;
     scanf("%d",&n);
     for(i=1;i<=n;i++)
     {
@@ -32,5 +33,6 @@ int main()
             k++;
         }
     }
-    non_prime(arr,p);
+    h=non_prime(arr,p);
+    printf("%d ",h);
 }
