@@ -1,31 +1,22 @@
 #include<stdio.h>
 #include<math.h>
-int main()
+int main ()
 {
-    int i,n,flag,c;
-    int l,r;
-    scanf("%d",&l);
-    scanf("%d",&r);
-    c=0;
-    for(n=l;n<=r;++n)
+    int m,n,i,j,count=0,c=0;
+    scanf("%d%d",&m,&n);
+    if(m==1)
+    m=2;
+    for(j=m;j<=n;j++)
     {
-        if(n==1)
+        count=0;
+        for(i=2;i<=sqrt(j);i++)
         {
-            continue;
+            if(j%i==0)
+            count++;
         }
-        flag=0;
-        for(i=2;i<=sqrt(n);++i)
-        {
-            if(n%i==0)
-            {
-                flag=1;
-                break;
-            }
-        }
-        if(flag==0)
-        {
-            ++c;
-        }
+        if(count==0)
+        c++;
     }
     printf("%d",c);
+    return 0;
 }
