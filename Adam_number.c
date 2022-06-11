@@ -1,23 +1,24 @@
 #include<stdio.h>
-int main()
+int reverse(int n)
 {
-    int n,r,x=0,y,a,b,c=0;
-    scanf("%d",&n);
-    y=n*n;
-    while (n>0)
+    int d,rev=0;
+    while(n!=0)
     {
-        r=n%10;
-        x=x*10+r;
+        d=n%10;
+        rev=rev*10+d;
         n=n/10;
     }
-    a=x*x;
-    while (a>0)
-    {
-        b=a%10;
-        c=c*10+b;
-        a=a/10;
-    }
-    if (y==c)
+    return rev;
+}
+int main()
+{
+    int n,s,r,m,k;
+    scanf("%d",&n);
+    s=n*n;
+    r=reverse(n);
+    m=r*r;
+    k=reverse(m);
+    if(s==k)
     {
         printf("True");
     }
@@ -25,5 +26,4 @@ int main()
     {
         printf("False");
     }
-    return 0;
 }
