@@ -11,14 +11,10 @@ int main()
         r=n1%10;
         s=s+pow(r,c);
         n1=n1/10;
-        c-=1;
+        c--;
     }
     if(n2==s)
-    {
-        printf("True");
-    }
+     printf("True");
     else
-    {
-        printf("False");
-    }
+     printf("False");
 }
