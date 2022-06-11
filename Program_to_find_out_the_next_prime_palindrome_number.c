@@ -2,7 +2,7 @@
 #include<math.h>
 int main()
 {
-    int n,p,r=0,d,c;
+    int n,p,r=0,c,d;
     scanf("%d",&n);
     while(n!=0)
     {
@@ -31,5 +31,5 @@ int main()
         }
         r=0;
     }
-    printf("%d ",n);
+    printf("%d",n);
 }
