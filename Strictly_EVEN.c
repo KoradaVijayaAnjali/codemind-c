@@ -1,22 +1,22 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,x[100],c=0;
+    int i,n,arr[100],c=0;
     scanf("%d",&n);
     for(i=0;i<n;i++)
     {
-        scanf("%d",&x[i]);
+        scanf("%d",&arr[i]);
     }
-    for(i=1;i<n;i+=2)
+    for(i=0;i<n;i++)
     {
-        if(x[i]%2==0)
+        if(arr[i]%2==0)
         {
-            printf("False");
-            c++;
-            break;
+            if(i%2!=0)
+            {
+                printf("False");
+                return 0;
+            }
         }
-    
     }
-    if(c==0)
     printf("True");
 }
