@@ -13,5 +13,4 @@ int main()
         n=n/10;
     }
     printf("%d",l);
-    return 0;
 }
