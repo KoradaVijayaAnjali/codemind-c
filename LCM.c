@@ -1,15 +1,24 @@
 #include<stdio.h>
 int main()
 {
-    int a,b;
+    int a,b,t=2,lcm=1;
     scanf("%d%d",&a,&b);
-    int lcm=(a>b)?a:b;
     while(1)
     {
-        if(lcm%a==0 && lcm%b==0)
+        if(a%t==0 && b%t==0)
+        {
+            a=a/t;
+            b=b/t;
+            lcm=lcm*t;
+        }
+        else
+        {
+            t++;
+        }
+        if(a<t || b<t)
+        {
             break;
-            lcm++;
+        }
     }
-    printf("%d",lcm);
-    return 0;
+    printf("%d",lcm*a*b);
 }
