@@ -1,25 +1,20 @@
 #include<stdio.h>
-int even_sum(int *arr,int n)
-{
-    int i,sum=0;
-    for(i=0;i<n;i++)
-    {
-        if(arr[i]%2==0)
-        {
-            sum=sum+arr[i];
-        }
-    }
-    return sum;
-}
+#include<math.h>
 int main()
 {
-    int n,i,arr[100],k;
+    int n,arr[100],i,es=0,os=0,diff;
     scanf("%d",&n);
     for(i=0;i<n;i++)
     {
         scanf("%d",&arr[i]);
     }
-    k=even_sum(arr,n);
-    printf("%d",k);
+    for(i=0;i<n;i++)
+    {
+        if(arr[i]%2==0)
+        {
+            es=es+arr[i];
+        }
+    }
     
+    printf("%d",es);
 }
