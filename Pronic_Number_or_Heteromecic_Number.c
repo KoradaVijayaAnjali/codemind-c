@@ -1,17 +1,27 @@
 #include<stdio.h>
-int main()
+int pronic(int n,int x,int flag)
 {
-    int n,i,k=0;
-    scanf("%d",&n);
-    for(i=1;i<=n;i++)
+    int sum;
+    for(x=0;x<=n;x++)
     {
-        if(i*(i+1)==n)
+        sum=x*(x+1);
+        if(sum==n)
         {
-            k=1;
+            flag=1;
             break;
         }
     }
-    if(k==1)
+    if(flag==1)
+    {
+        return 1;
+    }
+    return 0;
+}
+int main()
+{
+    int n,x,flag;
+    scanf("%d",&n);
+    if(pronic(n,x,flag))
     {
         printf("YES");
     }
