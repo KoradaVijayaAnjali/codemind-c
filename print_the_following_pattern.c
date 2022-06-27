@@ -1,16 +1,16 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,j;
-    char arr[100][100],k='A';
+    char i,j;
+    int n;
     scanf("%d",&n);
-    for(i=0;i<n;i++)
+    for(i=65+n-1;i>=65;i--)
     {
-        for(j=0;j<n;j++)
+        for(j=1;j<=n;j++)
         {
-            printf("%c ",k);
+            printf("%c ",i);
         }
-        k++;
+        n--;
         printf("
 ");
     }
