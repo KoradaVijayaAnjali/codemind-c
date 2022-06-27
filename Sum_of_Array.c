@@ -1,22 +1,16 @@
 #include<stdio.h>
-int sum(int *arr,int n)
-{
-    int i,sum=0;
-    for(i=0;i<n;i++)
-    {
-        sum=sum+arr[i];
-    }
-    return sum;
-}
+#include<math.h>
 int main()
 {
-    int n,i,arr[100],k;
+    int n,arr[100],i,sum=0;
     scanf("%d",&n);
     for(i=0;i<n;i++)
     {
         scanf("%d",&arr[i]);
     }
-    k=sum(arr,n);
-    printf("%d",k);
-    
+    for(i=0;i<n;i++)
+    {
+        sum=sum+arr[i];
+    }
+    printf("%d",sum);
 }
