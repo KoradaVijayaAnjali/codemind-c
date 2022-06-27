@@ -1,16 +1,21 @@
 #include<stdio.h>
 int main()
 {
-    int i,num;
-    scanf("%d",&num);
-    for(i=0;i<=num;i++)
+    int n,i,c=0;
+    scanf("%d",&n);
+    for(i=1;i<n;i++)
     {
-        if(num==i*i)
+        if(i*i==n)
         {
-            printf("True");
-            return 0;
+            c++;
         }
     }
-    printf("False");
-    return 0;
+    if(c==1)
+    {
+        printf("True");
+    }
+    else
+    {
+        printf("False");
+    }
 }
