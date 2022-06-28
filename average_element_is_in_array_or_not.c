@@ -1,36 +1,33 @@
 #include<stdio.h>
-int element(int *arr,int n,int m)
-{
-    int i,k;
-    for(i=0;i<n;i++)
-    {
-        if(arr[i]==m)
-        {
-            k++;
-        }
-    }
-    return k;
-}
+#include<math.h>
 int main()
 {
-    int n,i,arr[100],k,sum=0,avg;
+    int arr[100],n,i,k,c,sum=0;
     scanf("%d",&n);
     for(i=0;i<n;i++)
     {
         scanf("%d",&arr[i]);
     }
+    scanf("%d",&k);
     for(i=0;i<n;i++)
     {
         sum=sum+arr[i];
     }
-    avg=sum/n;
-    k=element(arr,n,avg);
-    if(k==0)
-    {
-        printf("False");
-    }
-    else
-    {
-        printf("True");
-    }
+   k=sum/n;
+   i=0;
+   for(i=0;i<n;i++)
+   {
+       if(arr[i]==k)
+       {
+           c=1;
+       }
+   }
+   if(c==1)
+   {
+       printf("True");
+   }
+   else
+   {
+       printf("False");
+   }
 }
