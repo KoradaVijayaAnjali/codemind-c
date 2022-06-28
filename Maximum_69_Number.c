@@ -8,7 +8,7 @@ int main()
     while(n>0)
     {
         r=n/(int)ceil(pow(10,d));
-        if(r==6 && k==0)
+        if(r==6&&k==0)
         {
             printf("9");
             k=1;
