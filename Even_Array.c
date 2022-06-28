@@ -1,26 +1,20 @@
 #include<stdio.h>
-int even_array(int *arr,int n)
-{
-    int i,k=0;
-    for(i=0;i<n;i++)
-    {
-        if(arr[i]%2==0)
-        {
-            k++;
-        }
-    }
-    return k;
-}
 int main()
 {
-    int i,n,arr[100],k;
+    int arr[100],n,i,c=0;
     scanf("%d",&n);
     for(i=0;i<n;i++)
     {
         scanf("%d",&arr[i]);
     }
-    k=even_array(arr,n);
-    if(k==n)
+    for(i=0;i<n;i++)
+    {
+        if(arr[i]%2==0)
+        {
+            c++;
+        }
+    }
+    if(c==n)
     {
         printf("True");
     }
