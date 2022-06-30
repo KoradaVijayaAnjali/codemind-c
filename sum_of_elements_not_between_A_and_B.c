@@ -1,23 +1,22 @@
 #include<stdio.h>
 int main()
 {
-    int n,arr[100],i,a,b,k=0;
+    int n,i,a,b;
+    int s=0,p=0;
     scanf("%d",&n);
+    int ar[n];
     for(i=0;i<n;i++)
     {
-        scanf("%d",&arr[i]);
+        scanf("%d",&ar[i]);
     }
     scanf("%d%d",&a,&b);
     for(i=0;i<n;i++)
     {
-       if(arr[i]>=a && arr[i]<=b)
-       {
-           continue;
-       }
-       else
-       {
-            k=k+arr[i];
-       } 
+        if(ar[i]>=a && ar[i]<=b)
+        {
+            s=s+ar[i];
+        }
+        p=p+ar[i];
     }
-    printf("%d",k);
+    printf("%d",p-s);
 }
