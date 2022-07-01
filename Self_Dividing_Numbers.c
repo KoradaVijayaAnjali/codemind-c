@@ -1,8 +1,8 @@
 #include<stdio.h>
-int fun(int n)//10
+int fun(int n)
 {
    int d,temp,c=0,cc=0;
-   temp=n;//10
+   temp=n;
    while(n)
    {
        d=n%10;
@@ -37,5 +37,4 @@ int main()
             printf("%d ",i);
         }
     }
-    
 }
