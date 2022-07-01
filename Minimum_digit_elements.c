@@ -7,7 +7,6 @@ int main()
     for(i=0;i<n;i++)
     {
         scanf("%d",&a[i]);
-        //printf("%d ",a[i]);
     }
     int min=a[0];
     for(i=0;i<n;i++)
@@ -17,7 +16,6 @@ int main()
             min=a[i];
         }
     }
-    //printf("%d ",min);
      while(min)
             {
                 min=min/10;
